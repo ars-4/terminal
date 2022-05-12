@@ -43,6 +43,26 @@ let enter = () => {
     input.value = '';
 }
 
+
+let helpMsg = [
+    ["help", "Prints This Help Message"],
+    ["cls", "To Clear Current Screen"],
+    ["update", "To Checkand Update Terminal"],
+    ["time", "To Check Current Time"],
+    ["--v", "Prints Current version for terminal"],
+    ["----------", "-----------"],
+    ["show warning", "Show a yellow color text"],
+    ["show alert", "Show a red color text"],
+    ["show success", "Show a green color text"],
+    ["show verified", "Show a cyan color text"],
+    ["----------", "-----------"],
+    ["python --v", "Prints The current version of Python Installed"],
+    ["node --v", "Prints the current node version installed"],
+    ["----------", "-----------"],
+    ["Other Commands Coming Soon ", " "]
+]
+
+
 let updateActions = [
     "Checking for updates",
     "Updates Pending",
@@ -63,7 +83,7 @@ let inputVal = (_messege) => {
 
 
     if(_messege == 'test') {
-        appender(">> " + "<a href='"+ 'The Link' +"'>OKAY</a>");
+        appender(">> " + "<a href='"+ 'https://ars-7.herokuapp.com' +"'>Link</a>");
     }
 
     else if(_messege == 'show warning') {
@@ -78,6 +98,10 @@ let inputVal = (_messege) => {
         appender('>> ' + "This is a success message!", "green");
     }
 
+    else if (_messege == 'show verified') {
+        appender('>> ' + "This is a verified message!", "#00ffff");
+    }
+
     else if (_messege == '--v') {
         appender('>> ' + "You are using Sparrow OS TXS copyright 2022 all rights reserved")
     }
@@ -89,6 +113,12 @@ let inputVal = (_messege) => {
 
     else if (_messege == 'cls') {
         noded.innerHTML = '';
+    }
+
+    else if (_messege == 'help') {
+        for(let i = 0; i< helpMsg.length; i++) {
+            appender(">> "+ helpMsg[i][0] +" ------- " +  helpMsg[i][1], "#00ffff");
+        }
     }
 
     // PACKAGES
