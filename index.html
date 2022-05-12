@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+</head>
+<style>
+    body {
+        background-color: #242424;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #c3c3c3;
+    }
+    input, input:focus, input:active {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+    }
+    #after {
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    a {
+        color: #c3c3c3;
+    }
+
+</style>
+<body>
+    <div id="noded"></div>
+    <div id="before">
+        <input id="name" placeholder="Enter Your Username To Continue" size="30">
+    </div>
+    <div id="after">
+        $
+        <span id="user"></span>
+        @sparrowOS
+        &gt;
+        <input type="text" id="input" autofocus size="100">
+        <i>_</i>
+        <input type="submit" hidden onclick="enter()" id="btn">
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
